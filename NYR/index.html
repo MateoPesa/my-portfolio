@@ -536,14 +536,17 @@
             // for buttons
             d3.select("#button-goal").on("click", () => {
                 currentEvent = "GOAL";
+                currentSeason = slider.property("value");
                 
                 updateMap(currentSeason, currentEvent);
-                updateBarPlot(currentSeason, currentEvent)
-                updatePositionBarPlot(currentSeason, currentEvent)
+                updateBarPlot(currentSeason, currentEvent);
+                updatePositionBarPlot(currentSeason, currentEvent);
             });
 
             d3.select("#button-miss").on("click", () => {
                 currentEvent = "MISS";
+                currentSeason = slider.property("value");
+                
                 updateMap(currentSeason, currentEvent);
                 updateBarPlot(currentSeason, currentEvent)
                 updatePositionBarPlot(currentSeason, currentEvent)
